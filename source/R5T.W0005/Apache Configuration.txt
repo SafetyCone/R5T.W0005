@@ -1,0 +1,8 @@
+﻿<VirtualHost *:80>
+    ServerName test.codealloy.net
+    ProxyPreserveHost On
+    ProxyPass / http://127.0.0.1:5002/
+    ProxyPassReverse / http://127.0.0.1:5003/
+    ErrorLog /var/log/httpd/R5T.W0005-error.log
+    CustomLog /var/log/httpd/R5T.W0005-access.log common
+</VirtualHost>
